@@ -23,7 +23,7 @@
 - **<p id="Docker">Deployment using Docker</p>**
   - Clone the repository
   ```bash
-  git clone -b DevOps https://github.com/DevMadhup/Springboot-BankApp.git
+  git clone -b DevOps https://github.com/irahulgupta/Springboot-bankapp-docker.git
   ```
   #
   - Install docker, docker compose and provide neccessary permission
@@ -42,7 +42,7 @@
   #
   - Build the Dockerfile
   ```bash
-  docker build -t madhupdevops/springboot-bankapp .
+  docker build -t bankapp .
   ```
 > [!Important]
 > Make sure to change docker build command with your DockerHub username.
@@ -54,7 +54,7 @@
   #
   - Run MYSQL container
   ```bash
-  docker run -itd --name mysql -e MYSQL_ROOT_PASSWORD=Test@123 -e MYSQL_DATABASE=BankDB --network=bankapp mysql
+  docker run -itd --name=mysql -e MYSQL_DATABASE=BankDB -e MYSQL_ROOT_PASSWORD=Test@123 --network=bankapp mysql
   ```
   #
   - Run Application container
